@@ -121,7 +121,7 @@ Tested on emulators running API LEVEL 29 and 30
    - reboot device: `adb reboot`
    - restart adb as root: `adb root`
    - perform remount of partitions as read-write: `adb remount`. (If adb tells you that you need to reboot, reboot again `adb reboot` and run `adb remount` again.)
-   - push your renamed certificate from [step 2]({{< ref "#2-rename-certificate" >}}): `adb push <path_to_certificate> /system/etc/security/cacerts`
+   - push your renamed certificate from [step 2]({{< ref "#2-rename-certificate" >}}), for example: `adb push ~/.mitmproxy/c8450d0d.0 /system/etc/security/cacerts` (replace the example hash with the one generated in step 2).
    - set certificate permissions: `adb shell chmod 644 /system/etc/security/cacerts/<name_of_pushed_certificate>`
    - reboot device: `adb reboot`
 
@@ -135,7 +135,7 @@ Tested on emulators running API LEVEL 26, 27 and 28
    - Start the desired AVD: `emulator -avd <avd_name_here> -writable-system` (add `-show-kernel` flag for kernel logs)
    - restart adb as root: `adb root`
    - perform remount of partitions as read-write: `adb remount`. (If adb tells you that you need to reboot, reboot again `adb reboot` and run `adb remount` again.)
-   - push your renamed certificate from [step 2]({{< ref "#2-rename-certificate" >}}): `adb push <path_to_certificate> /system/etc/security/cacerts`
+   - push your renamed certificate from [step 2]({{< ref "#2-rename-certificate" >}}), for example: `adb push ~/.mitmproxy/c8450d0d.0 /system/etc/security/cacerts` (replace the example hash with the one generated in step 2).
    - set certificate permissions: `adb shell chmod 644 /system/etc/security/cacerts/<name_of_pushed_certificate>`
    - reboot device: `adb reboot`
 
